@@ -4,4 +4,5 @@ RUN apt update && apt install -y nginx
 COPY index.html /var/www/html
 VOLUME /var/www/html
 ENTRYPOINT ["nginx", "-g", "daemon off;"]
+ENV PASSWORD 123456
 EXPOSE 80
