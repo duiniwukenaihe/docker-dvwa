@@ -1,4 +1,4 @@
-FROM tutum/lamp
+FROM harbor.layame.com/devlop/abc:7
 
 MAINTAINER Tanvir Ahmed (Twitter:@tahmed111)
 
@@ -11,13 +11,6 @@ RUN rm -rf /app && \
 
 COPY conf/* /tmp/
 
-RUN wget https://github.com.cnpmjs.org/ethicalhack3r/DVWA/archive/v${VERSION}.tar.gz && \
-    tar xvf /v${VERSION}.tar.gz && \
-    mv -f /DVWA-${VERSION} /app && \
-    rm /app/.htaccess && \
-    mv /tmp/.htaccess /app && \
-    chmod +x /tmp/setup_dvwa.sh && \
-    /tmp/setup_dvwa.sh
 
 EXPOSE 80 3306
 
