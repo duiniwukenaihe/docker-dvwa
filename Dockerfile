@@ -11,7 +11,7 @@ RUN rm -rf /app && \
 
 COPY conf/* /tmp/
 
-RUN wget https://github.com/ethicalhack3r/DVWA/archive/v${VERSION}.tar.gz && \
+RUN wget https://github.com.cnpmjs.org/ethicalhack3r/DVWA/archive/v${VERSION}.tar.gz && \
     tar xvf /v${VERSION}.tar.gz && \
     mv -f /DVWA-${VERSION} /app && \
     rm /app/.htaccess && \
